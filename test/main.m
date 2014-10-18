@@ -11,6 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        // I'd like to call a function without have to wrap it in a class:
         // NSInteger theWidth1 = getImageWidth(); // doesn't work.
         // printf("Image width1: %ld\n", theWidth1);
         NSInteger theWidth2 = ClassMethodWrapper.getImageWidth;

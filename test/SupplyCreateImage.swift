@@ -17,15 +17,9 @@ public func makeImage(dict : [ NSObject:AnyObject]! ) -> Unmanaged<CGImageRef>! 
     return x
 }
 
+// The following function not part of a class is unused, as I can't assign to it.
 public func getImageWidth() -> Int {
     var imageProvider:CreateImageProtocol = MakeImageProvider()
-    //    imageProvider.setCreateImage?(makeImage)
-    imageProvider.createImage = makeImage
-    return imageProvider.imageWidth()
-}
-
-public func getImageWidth2() -> Int {
-    let imageProvider = ImageProvider2()
     imageProvider.createImage = makeImage
     return imageProvider.imageWidth()
 }

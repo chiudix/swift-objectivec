@@ -42,7 +42,7 @@
 id<CreateImageProtocol>MakeImageProvider()
 {
     ImageProvider *imageProvider = [[ImageProvider alloc] init];
-/*
+//
     imageProvider.optionalCreateImage = ^CGImageRef(NSDictionary *dict){
         CGImageRef theImage;
         NSString *filePath = dict[@"imagefilepath"];
@@ -52,6 +52,6 @@ id<CreateImageProtocol>MakeImageProvider()
         theImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil);
         return theImage;
     };
- */
+//*/
     return imageProvider;
 }
