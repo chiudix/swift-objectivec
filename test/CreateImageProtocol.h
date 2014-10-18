@@ -11,9 +11,12 @@
 @protocol CreateImageProtocol <NSObject>
 
 -(NSInteger)imageWidth;
+-(NSInteger)imageWidthOptional;
 
-// @optional
 @property (nonatomic, copy) CGImageRef(^createImage)(NSDictionary *);
+
+@optional
+@property (nonatomic, copy) CGImageRef(^optionalCreateImage)(NSDictionary *);
 @end
 
 id<CreateImageProtocol>MakeImageProvider();
